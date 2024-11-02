@@ -59,7 +59,7 @@ router.put("/update/project/:id", async (req, res) => {
 });
 
 // get data from specific project Data
-router.get("/projects/:id", async (req, res) => {
+router.get("/project/:id", async (req, res) => {
   const { id } = req.params;
   try {
     const projects = await Project.findById(id);
