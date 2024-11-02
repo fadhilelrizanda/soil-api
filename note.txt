@@ -1,0 +1,13 @@
+npm needed : 
+express
+nodemon
+dotenv
+mongoose
+
+
+/personalQuest
+ - question 
+ - questionType
+ - surveyType 
+
+ pemberian susu = surveyType 0

@@ -1,0 +1,11 @@
+Data structure :
+
+{
+id_project :"strasd"
+title_project: "asda"
+description: "asdas"
+    data :[
+        {"id_data":1,"Kedalaman":12, "HB":12,"HL":12,"FR":x,
+        "Bageman":"as","Shertmann":"asa","titik":12}
+    ]
+}
