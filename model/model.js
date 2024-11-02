@@ -10,6 +10,10 @@ const dataSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    HL: {
+      type: Number,
+      required: true,
+    },
     FR: {
       type: Number,
       required: true,
