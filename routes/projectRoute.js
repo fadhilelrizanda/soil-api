@@ -58,6 +58,22 @@ router.put("/update/project/:id", async (req, res) => {
   }
 });
 
+// get data from specific project Data
+router.get("/projects/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const projects = await Project.findById(id);
+    res.json(projects);
+
+    if (!projects) {
+      return res.status(404).json({ message: "Project not found" });
+    }
+  } catch (error) {
+    console.error("Error fetching projects:", error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
 // Add Data Entry to an Existing Project
 router.post("/add/data/:id", async (req, res) => {
   const { id } = req.params;
