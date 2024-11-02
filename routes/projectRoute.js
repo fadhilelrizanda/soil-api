@@ -26,7 +26,15 @@ router.post("/create/project", async (req, res) => {
 // Get All Projects
 router.get("/projects", async (req, res) => {
   try {
-    const projects = await Project.find();
+    const projects = await Project.aggregate([
+      {
+        $project: {
+          title: 1,
+          desc: 1,
+          dataCount: { $size: "$data" },
+        },
+      },
+    ]);
     res.json(projects);
   } catch (error) {
     console.error("Error fetching projects:", error);
