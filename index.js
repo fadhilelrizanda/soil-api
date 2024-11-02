@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
   res.send("Express on Vercel");
 });
 
-app.use("/users", users);
+app.use("/projects", users);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
